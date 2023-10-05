@@ -1,3 +1,5 @@
+﻿using System.Security.Cryptography.X509Certificates;
+using System.Text.Json;
 ﻿using Domain;
 
 namespace MyCars
@@ -6,8 +8,18 @@ namespace MyCars
     {
         static void Main(string[] args)
         {
-            Voiture v = new Voiture(50000, "Lamborguini", "L2");
-            Console.WriteLine(v.Prix);
+            //List<Voiture> voitures= 
+            Console.WriteLine("Hello, World!");
+
+            
+
+        }
+
+        public static void EnregistrerVoitures(List<Voiture> voitures)
+        {
+            string fileName = "listeVoitures.json";
+            string jsonString = JsonSerializer.Serialize(voitures);
+            File.WriteAllText(fileName, jsonString);
         }
     }
 }
