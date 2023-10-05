@@ -15,7 +15,7 @@ namespace MyCars
 
         }
 
-        public void EnregistrerVoitures(List<Voiture> voitures)
+        public static void EnregistrerVoitures(List<Voiture> voitures)
         {
             string fileName = "listeVoitures.json";
             string jsonString = JsonSerializer.Serialize(voitures);
