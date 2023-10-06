@@ -18,7 +18,7 @@
         {
             this.Prix = _prix;
             this.Marque = _marque;
-            this.Modele = _modele;
+            this.Modele = _marque;
         }
 
         private void ChangerMarque(string _marque)
